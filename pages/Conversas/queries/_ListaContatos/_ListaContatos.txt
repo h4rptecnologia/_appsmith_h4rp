@@ -1,0 +1,9 @@
+SELECT *
+FROM chatwoot.conversations c
+INNER JOIN chatwoot.messages m ON (
+	c.ID = m.conversation_id
+)
+--inner join chatwoot.contacts ct on (
+	--ct.id = c.contact_id
+--)
+--WHERE created_at::DATE = {{DatePicker1.formattedDate}}

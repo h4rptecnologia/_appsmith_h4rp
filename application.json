@@ -18,8 +18,20 @@
   "icon": "rose",
   "pages": [
     {
-      "id": "Page1",
+      "id": "Config Bot",
       "isDefault": true
+    },
+    {
+      "id": "Config Time",
+      "isDefault": false
+    },
+    {
+      "id": "Conversas",
+      "isDefault": false
+    },
+    {
+      "id": "Vendas",
+      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {
