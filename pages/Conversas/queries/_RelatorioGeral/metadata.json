@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a25ad11f7e5102981d52a90_d9320471-cc34-45bd-a8da-62998cfaa4c6",
-  "id": "Conversas_RelatorioPorDia",
+  "id": "Conversas__RelatorioGeral",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "RelatorioPorDia",
+    "name": "_RelatorioGeral",
     "pageId": "Conversas",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

@@ -1,0 +1,6 @@
+SELECT 
+  COALESCE(m.sender_type, 'Não Identificado') AS sender_type,
+  COUNT(m.id) AS qtde_mensagens
+FROM chatwoot.messages m
+WHERE m.created_at >= (CURRENT_DATE - INTERVAL '30 days')
+GROUP BY COALESCE(m.sender_type, 'Não Identificado');
