@@ -1,0 +1,4 @@
+SELECT 
+  (SELECT COUNT(m.id) FROM chatwoot.conversations m WHERE m.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_conversas,
+  (SELECT COUNT(me.id) FROM chatwoot.messages me WHERE me.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_mensagens,
+  (SELECT COUNT(c.id) FROM chatwoot.contacts c WHERE c.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_contatos;

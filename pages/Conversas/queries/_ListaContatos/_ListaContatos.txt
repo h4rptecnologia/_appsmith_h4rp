@@ -1,9 +1,73 @@
-SELECT *
+SELECT 
+  -- Conversas
+  c.id AS conversation_id,
+  c.account_id AS conversation_account_id,
+  c.inbox_id AS conversation_inbox_id,
+  c.status AS conversation_status,
+  c.assignee_id AS conversation_assignee_id,
+  c.created_at AS conversation_created_at,
+  c.updated_at AS conversation_updated_at,
+  c.contact_id AS conversation_contact_id,
+  c.display_id AS conversation_display_id,
+  c.contact_last_seen_at AS conversation_contact_last_seen_at,
+  c.agent_last_seen_at AS conversation_agent_last_seen_at,
+  c.additional_attributes AS conversation_additional_attributes,
+  c.contact_inbox_id AS conversation_contact_inbox_id,
+  c."uuid" AS conversation_uuid,
+  c.identifier AS conversation_identifier,
+  c.last_activity_at AS conversation_last_activity_at,
+  c.team_id AS conversation_team_id,
+  c.campaign_id AS conversation_campaign_id,
+  c.snoozed_until AS conversation_snoozed_until,
+  c.custom_attributes AS conversation_custom_attributes,
+  c.assignee_last_seen_at AS conversation_assignee_last_seen_at,
+  c.first_reply_created_at AS conversation_first_reply_created_at,
+  c.priority AS conversation_priority,
+  c.sla_policy_id AS conversation_sla_policy_id,
+  c.waiting_since AS conversation_waiting_since,
+  c.cached_label_list AS conversation_cached_label_list,
+  c.assignee_agent_bot_id AS conversation_assignee_agent_bot_id,
+
+  -- Mensagens
+  m.id AS message_id,
+  m."content" AS message_content,
+  m.account_id AS message_account_id,
+  m.inbox_id AS message_inbox_id,
+  m.conversation_id AS message_conversation_id,
+  m.message_type AS message_type,
+  m.created_at AS message_created_at,
+  m.updated_at AS message_updated_at,
+  m.private AS message_private,
+  m.status AS message_status,
+  m.source_id AS message_source_id,
+  m.content_type AS message_content_type,
+  m.content_attributes AS message_content_attributes,
+  m.sender_type AS message_sender_type,
+  m.sender_id AS message_sender_id,
+  m.external_source_ids AS message_external_source_ids,
+  m.additional_attributes AS message_additional_attributes,
+  m.processed_message_content AS message_processed_message_content,
+  m.sentiment AS message_sentiment,
+
+  -- Contatos
+  ct.id AS contact_id,
+  ct."name" AS contact_name,
+  ct.email AS contact_email,
+  ct.phone_number AS contact_phone_number,
+  ct.account_id AS contact_account_id,
+  ct.created_at AS contact_created_at,
+  ct.updated_at AS contact_updated_at,
+  ct.additional_attributes AS contact_additional_attributes,
+  ct.identifier AS contact_identifier,
+  ct.custom_attributes AS contact_custom_attributes,
+  ct.last_activity_at AS contact_last_activity_at,
+  ct.contact_type AS contact_type,
+  ct.middle_name AS contact_middle_name,
+  ct.last_name AS contact_last_name,
+  ct."location" AS contact_location,
+  ct.country_code AS contact_country_code,
+  ct."blocked" AS contact_blocked,
+  ct.company_id AS contact_company_id
 FROM chatwoot.conversations c
-INNER JOIN chatwoot.messages m ON (
-	c.ID = m.conversation_id
-)
---inner join chatwoot.contacts ct on (
-	--ct.id = c.contact_id
---)
---WHERE created_at::DATE = {{DatePicker1.formattedDate}}
+INNER JOIN chatwoot.messages m ON c.id = m.conversation_id
+INNER JOIN chatwoot.contacts ct ON ct.id = c.contact_id;
