@@ -1,0 +1,28 @@
+SELECT
+    bc.id,
+    bc.chatwoot_bot_id,
+    COALESCE(ab.name, 'Bot #' || bc.chatwoot_bot_id::TEXT) AS chatwoot_bot_name,
+    bc.bot_name,
+    bc.description,
+    bc.enabled,
+    CASE
+        WHEN bc.full_prompt IS NULL THEN ''
+        WHEN LENGTH(bc.full_prompt) > 220 THEN LEFT(bc.full_prompt, 220) || '...'
+        ELSE bc.full_prompt
+    END AS prompt_resumo,
+    bc.full_prompt,
+    bc.provider,
+    bc.model_name,
+    bc.temperature,
+    bc.max_output_tokens,
+    bc.allow_handoff,
+    bc.fallback_team_id,
+    t.name AS fallback_team_name,
+    bc.created_at,
+    bc.updated_at
+FROM public.bot_config bc
+LEFT JOIN chatwoot.agent_bots ab
+    ON ab.id = bc.chatwoot_bot_id
+LEFT JOIN chatwoot.teams t
+    ON t.id = bc.fallback_team_id
+ORDER BY bc.enabled DESC, bc.updated_at DESC NULLS LAST, bc.id DESC;

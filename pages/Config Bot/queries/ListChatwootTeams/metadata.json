@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a25ad11f7e5102981d52a90_12e151a8-f0ae-4d34-9e30-24af8910e124",
-  "id": "Config Bot_Query1",
+  "gitSyncId": "6a25ad11f7e5102981d52a90_603c169c-d091-4c73-88cd-8dd0da41199f",
+  "id": "Config Bot_ListChatwootTeams",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"dim_competition\" LIMIT 10;",
+      "body": "SELECT\n    t.id::TEXT AS value,\n    COALESCE(NULLIF(t.name, ''), 'Time') || ' #' || t.id::TEXT AS label\nFROM chatwoot.teams t\nORDER BY COALESCE(NULLIF(t.name, ''), 'Time'), t.id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,8 @@
       "name": "Untitled datasource 1",
       "pluginId": "postgres-plugin"
     },
-    "name": "Query1",
+    "dynamicBindingPathList": [],
+    "name": "ListChatwootTeams",
     "pageId": "Config Bot",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

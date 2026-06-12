@@ -1,0 +1,8 @@
+SELECT
+    ab.id::TEXT AS value,
+    COALESCE(NULLIF(ab.name, ''), 'Agent Bot') || ' #' || ab.id::TEXT ||
+        CASE WHEN bc.id IS NOT NULL THEN ' • já configurado' ELSE '' END AS label
+FROM chatwoot.agent_bots ab
+LEFT JOIN public.bot_config bc
+    ON bc.chatwoot_bot_id = ab.id
+ORDER BY COALESCE(NULLIF(ab.name, ''), 'Agent Bot'), ab.id;

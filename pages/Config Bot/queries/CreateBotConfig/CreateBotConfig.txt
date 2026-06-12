@@ -1,0 +1,44 @@
+INSERT INTO public.bot_config (
+    chatwoot_bot_id,
+    bot_name,
+    description,
+    enabled,
+    full_prompt,
+    provider,
+    model_name,
+    temperature,
+    max_output_tokens,
+    allow_handoff,
+    fallback_team_id,
+    created_at,
+    updated_at
+)
+VALUES (
+    {{Number(SelectChatwootBot.selectedOptionValue)}},
+    {{InputBotName.text}},
+    NULLIF({{InputDescription.text || ''}}, ''),
+    {{SwitchEnabled.isSwitchedOn}},
+    {{InputFullPrompt.text}},
+    COALESCE(NULLIF({{InputProvider.text || ''}}, ''), 'openai'),
+    COALESCE(NULLIF({{InputModelName.text || ''}}, ''), 'gpt-5.5'),
+    COALESCE(NULLIF({{InputTemperature.text || ''}}, '')::NUMERIC, 0.30),
+    COALESCE(NULLIF({{InputMaxTokens.text || ''}}, '')::INT, 1200),
+    {{SwitchAllowHandoff.isSwitchedOn}},
+    {{SelectFallbackTeam.selectedOptionValue ? Number(SelectFallbackTeam.selectedOptionValue) : null}},
+    NOW(),
+    NOW()
+)
+ON CONFLICT (chatwoot_bot_id)
+DO UPDATE SET
+    bot_name = EXCLUDED.bot_name,
+    description = EXCLUDED.description,
+    enabled = EXCLUDED.enabled,
+    full_prompt = EXCLUDED.full_prompt,
+    provider = EXCLUDED.provider,
+    model_name = EXCLUDED.model_name,
+    temperature = EXCLUDED.temperature,
+    max_output_tokens = EXCLUDED.max_output_tokens,
+    allow_handoff = EXCLUDED.allow_handoff,
+    fallback_team_id = EXCLUDED.fallback_team_id,
+    updated_at = NOW()
+RETURNING *;

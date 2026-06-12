@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 34,
   "boxShadow": "none",
   "dynamicBindingPathList": [
     {
@@ -25,6 +25,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 29,
   "needsErrorInfo": false,
+  "originalBottomRow": 32,
+  "originalTopRow": 29,
   "overflow": "NONE",
   "parentId": "uyodlyrr3t",
   "renderMode": "CANVAS",
@@ -34,7 +36,7 @@
   "text": "CONFIGURAÇÃO DA IA",
   "textAlign": "LEFT",
   "textColor": "#D4A017",
-  "topRow": 29,
+  "topRow": 30,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

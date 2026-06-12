@@ -1,0 +1,16 @@
+UPDATE public.bot_config
+SET
+    chatwoot_bot_id = {{Number(SelectChatwootBot.selectedOptionValue)}},
+    bot_name = {{InputBotName.text}},
+    description = NULLIF({{InputDescription.text || ''}}, ''),
+    enabled = {{SwitchEnabled.isSwitchedOn}},
+    full_prompt = {{InputFullPrompt.text}},
+    provider = COALESCE(NULLIF({{InputProvider.text || ''}}, ''), 'openai'),
+    model_name = COALESCE(NULLIF({{InputModelName.text || ''}}, ''), 'gpt-5.5'),
+    temperature = COALESCE(NULLIF({{InputTemperature.text || ''}}, '')::NUMERIC, 0.30),
+    max_output_tokens = COALESCE(NULLIF({{InputMaxTokens.text || ''}}, '')::INT, 1200),
+    allow_handoff = {{SwitchAllowHandoff.isSwitchedOn}},
+    fallback_team_id = {{SelectFallbackTeam.selectedOptionValue ? Number(SelectFallbackTeam.selectedOptionValue) : null}},
+    updated_at = NOW()
+WHERE id = {{appsmith.store.botConfigSelected.id || Table1.selectedRow.id}}
+RETURNING *;
