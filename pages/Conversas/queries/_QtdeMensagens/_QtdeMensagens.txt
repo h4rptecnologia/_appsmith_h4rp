@@ -1,0 +1,1 @@
+SELECT COUNT(me.id) AS TOTAL FROM chatwoot.messages me;

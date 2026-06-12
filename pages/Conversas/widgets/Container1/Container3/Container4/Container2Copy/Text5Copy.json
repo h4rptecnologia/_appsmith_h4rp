@@ -1,52 +1,55 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#0b1f2d",
+  "borderColor": "#ce951e",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "borderWidth": "",
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
-      "key": "fontFamily"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "3rem",
+  "fontFamily": "Roboto",
+  "fontSize": "1.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "ljg2aik598",
-  "leftColumn": 2,
+  "key": "sdxph5zcsf",
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8,
+  "mobileBottomRow": 23,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 10,
-  "mobileTopRow": 4,
+  "mobileRightColumn": 14,
+  "mobileTopRow": 19,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 12,
+  "originalBottomRow": 9,
+  "originalTopRow": 4,
   "overflow": "NONE",
-  "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "parentColumnSpace": 1.125,
+  "parentId": "xjjzxt14je",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 29,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "Lista de Conversas",
-  "textAlign": "LEFT",
+  "text": "{{_QtdeMensagens.data[0].total}}",
+  "textAlign": "CENTER",
   "textColor": "#ffffff",
-  "topRow": 12,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "8cwb2hj5ef",
-  "widgetName": "Text2"
+  "widgetId": "fqal1b637v",
+  "widgetName": "Text5Copy"
 }

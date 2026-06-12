@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  (SELECT COUNT(m.id) FROM chatwoot.conversations m WHERE m.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_conversas,\n  (SELECT COUNT(me.id) FROM chatwoot.messages me WHERE me.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_mensagens,\n  (SELECT COUNT(c.id) FROM chatwoot.contacts c WHERE c.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_contatos;\n",
+      "body": "SELECT \n  (SELECT COUNT(m.id) FROM chatwoot.conversations m WHERE m.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_conversas,\n  (SELECT COUNT(me.id) FROM chatwoot.messages me WHERE me.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_mensagens,\n  (SELECT COUNT(c.id) FROM chatwoot.contacts c WHERE c.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_contatos,\n\t(SELECT COUNT(b.id) from chatwoot.agent_bots b WHERE b.created_at >= (CURRENT_DATE - INTERVAL '7 days')) AS qtde_agents;\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
