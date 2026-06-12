@@ -1,0 +1,40 @@
+{
+  "accentColor": "#D4A017",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{appsmith.store.botConfigMode === \"edit\" ? !!appsmith.store.botConfigSelected.allow_handoff : true}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7x44ws6afx",
+  "label": "Permite humano",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#0D1B2A",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 45,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 41,
+  "needsErrorInfo": false,
+  "parentId": "uyodlyrr3t",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 18,
+  "topRow": 41,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "9fod23mpak",
+  "widgetName": "SwitchAllowHandoff"
+}

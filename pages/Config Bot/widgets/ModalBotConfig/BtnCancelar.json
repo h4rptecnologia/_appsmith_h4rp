@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "borderRadius": "1rem",
+  "bottomRow": 111,
+  "boxShadow": "0px 8px 20px rgba(13, 27, 42, 0.12)",
+  "buttonColor": "#1F2933",
+  "buttonStyle": "SECONDARY",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9lt9x957np",
+  "leftColumn": 30,
+  "minWidth": 120,
+  "mobileBottomRow": 111,
+  "mobileLeftColumn": 30,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 106,
+  "needsErrorInfo": false,
+  "onClick": "{{closeModal(ModalBotConfig.name);}}",
+  "parentId": "uyodlyrr3t",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 41,
+  "text": "CANCELAR",
+  "textColor": "#FFFFFF",
+  "topRow": 106,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "21fou8zm9c",
+  "widgetName": "BtnCancelar"
+}

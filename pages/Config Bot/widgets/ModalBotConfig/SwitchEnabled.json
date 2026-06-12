@@ -1,0 +1,40 @@
+{
+  "accentColor": "#D4A017",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{appsmith.store.botConfigMode === \"edit\" ? !!appsmith.store.botConfigSelected.enabled : true}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0vxz5mxiu5",
+  "label": "Ativo",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#0D1B2A",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "parentId": "uyodlyrr3t",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 51,
+  "topRow": 12,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "wkh9p7mh80",
+  "widgetName": "SwitchEnabled"
+}
