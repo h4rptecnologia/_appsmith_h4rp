@@ -4,7 +4,7 @@
   "autoFocus": false,
   "borderColor": "#A7ADB5",
   "borderRadius": "0.75rem",
-  "bottomRow": 73,
+  "bottomRow": 77,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.botConfigMode === \"edit\" ? (appsmith.store.botConfigSelected.full_prompt || \"\") : \"\"}}",
   "dynamicBindingPathList": [
@@ -43,9 +43,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "showStepArrows": false,
-  "topRow": 11,
+  "topRow": 15,
   "type": "INPUT_WIDGET_V2",
-  "validation": {},
+  "validation": "",
   "version": 2,
   "widgetId": "vf4dzu7se4",
   "widgetName": "InputFullPrompt"

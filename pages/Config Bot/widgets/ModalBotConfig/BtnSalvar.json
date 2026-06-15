@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "1rem",
-  "bottomRow": 79,
+  "bottomRow": 82,
   "boxShadow": "0px 8px 20px rgba(13, 27, 42, 0.12)",
   "buttonColor": "#D4A017",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -37,7 +37,7 @@
   "rightColumn": 61,
   "text": "SALVAR",
   "textColor": "#0D1B2A",
-  "topRow": 74,
+  "topRow": 77,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "5y65bxmb9l",

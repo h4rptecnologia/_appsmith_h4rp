@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a25ad11f7e5102981d52a90_603c169c-d091-4c73-88cd-8dd0da41199f",
-  "id": "Config Bot_ListChatwootTeams",
+  "gitSyncId": "6a25ad11f7e5102981d52a90_3f0b7464-abf5-4d41-8577-f0fdba589e82",
+  "id": "Config Bot_ListPromptTeams",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    t.id::TEXT AS value,\n    COALESCE(NULLIF(t.name, ''), 'Time') || ' #' || t.id::TEXT AS label\nFROM chatwoot.teams t\nORDER BY COALESCE(NULLIF(t.name, ''), 'Time'), t.id;",
+      "body": "SELECT\n    t.id::TEXT AS value,\n    COALESCE(NULLIF(t.name, ''), 'Time') || ' (#' || t.id::TEXT || ')' AS label\nFROM chatwoot.teams t\nORDER BY COALESCE(NULLIF(t.name, ''), 'Time'), t.id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "ListChatwootTeams",
+    "name": "ListPromptTeams",
     "pageId": "Config Bot",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

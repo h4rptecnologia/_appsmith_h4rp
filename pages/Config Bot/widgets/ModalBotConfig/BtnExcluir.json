@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "1rem",
-  "bottomRow": 79,
+  "bottomRow": 82,
   "bottomRowBeforeCollapse": 114,
   "boxShadow": "0px 8px 20px rgba(13, 27, 42, 0.12)",
   "buttonColor": "#B42318",
@@ -42,7 +42,7 @@
   "rightColumn": 49,
   "text": "EXCLUIR",
   "textColor": "#FFFFFF",
-  "topRow": 74,
+  "topRow": 77,
   "topRowBeforeCollapse": 109,
   "type": "BUTTON_WIDGET",
   "version": 1,

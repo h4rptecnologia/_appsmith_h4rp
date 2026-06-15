@@ -1,7 +1,8 @@
 SELECT
     bc.id,
-    bc.chatwoot_bot_id,
-    COALESCE(ab.name, 'Bot #' || bc.chatwoot_bot_id::TEXT) AS chatwoot_bot_name,
+    bc.chatwoot_team_id,
+    COALESCE(t_prompt.name, 'Time #' || bc.chatwoot_team_id::TEXT) AS chatwoot_team_name,
+    COALESCE(bc.principal_assignee_id, 1) AS principal_assignee_id,
     bc.bot_name,
     bc.description,
     bc.enabled,
@@ -17,12 +18,12 @@ SELECT
     bc.max_output_tokens,
     bc.allow_handoff,
     bc.fallback_team_id,
-    t.name AS fallback_team_name,
+    t_fallback.name AS fallback_team_name,
     bc.created_at,
     bc.updated_at
 FROM public.bot_config bc
-LEFT JOIN chatwoot.agent_bots ab
-    ON ab.id = bc.chatwoot_bot_id
-LEFT JOIN chatwoot.teams t
-    ON t.id = bc.fallback_team_id
+LEFT JOIN chatwoot.teams t_prompt
+    ON t_prompt.id = bc.chatwoot_team_id
+LEFT JOIN chatwoot.teams t_fallback
+    ON t_fallback.id = bc.fallback_team_id
 ORDER BY bc.enabled DESC, bc.updated_at DESC NULLS LAST, bc.id DESC;

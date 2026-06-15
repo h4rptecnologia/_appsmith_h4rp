@@ -4,7 +4,7 @@
   "autoFocus": false,
   "borderColor": "#A7ADB5",
   "borderRadius": "0.75rem",
-  "bottomRow": 41,
+  "bottomRow": 38,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.botConfigMode === \"edit\" ? String(appsmith.store.botConfigSelected.temperature || \"0.30\") : \"0.30\"}}",
   "dynamicBindingPathList": [
@@ -42,9 +42,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 16,
   "showStepArrows": false,
-  "topRow": 34,
+  "topRow": 31,
   "type": "INPUT_WIDGET_V2",
-  "validation": {},
+  "validation": "",
   "version": 2,
   "widgetId": "8v9olrx1u5",
   "widgetName": "InputTemperature"

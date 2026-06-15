@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "1rem",
-  "bottomRow": 79,
+  "bottomRow": 82,
   "boxShadow": "0px 8px 20px rgba(13, 27, 42, 0.12)",
   "buttonColor": "#1F2933",
   "buttonStyle": "SECONDARY",
@@ -37,7 +37,7 @@
   "rightColumn": 39,
   "text": "CANCELAR",
   "textColor": "#FFFFFF",
-  "topRow": 74,
+  "topRow": 77,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "21fou8zm9c",

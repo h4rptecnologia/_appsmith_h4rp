@@ -1,0 +1,66 @@
+{
+  "accentColor": "#D4A017",
+  "animateLoading": true,
+  "borderColor": "#D5DAE1",
+  "borderRadius": "0.9rem",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{appsmith.store.botConfigMode === \"edit\" && appsmith.store.botConfigSelected && appsmith.store.botConfigSelected.chatwoot_team_id ? String(appsmith.store.botConfigSelected.chatwoot_team_id) : \"\"}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "fqzfm3yc49",
+  "label": "Time do prompt",
+  "labelAlignment": "left",
+  "labelKey": "label",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#0D1B2A",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "optionLabel": "value",
+  "optionValue": "label",
+  "options": "{{(() => {\n  const selected = appsmith.store.botConfigSelected || {};\n  const currentValue = selected.chatwoot_team_id ? String(selected.chatwoot_team_id) : \"\";\n  const currentLabel = selected.chatwoot_team_id\n    ? `${selected.chatwoot_team_name || selected.bot_name || \"Time\"} (#${selected.chatwoot_team_id})`\n    : null;\n\n  const currentOption = currentValue ? [{ label: currentLabel, value: currentValue }] : [];\n\n  const dbOptions = (ListChatwootTeams.data || [])\n    .map((r) => ({ label: String(r.label), value: String(r.value) }))\n    .filter((o) => !currentValue || o.value !== currentValue);\n\n  return currentOption.concat(dbOptions);\n})()}}",
+  "originalBottomRow": 18,
+  "originalTopRow": 11,
+  "parentId": "uyodlyrr3t",
+  "placeholder": "Selecione o time que define este prompt",
+  "placeholderText": "Selecione o time que define este prompt",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 16,
+  "selectedOptionValue": "",
+  "serverSideFiltering": false,
+  "showStepArrows": false,
+  "sourceData": "{{ListChatwootTeams.data.map( (obj) =>{ return  {'label': obj.value, 'value': obj.label } })}}",
+  "topRow": 10,
+  "type": "SELECT_WIDGET",
+  "valueKey": "value",
+  "version": 1,
+  "widgetId": "f6tss02ucr",
+  "widgetName": "SelectPromptTeam"
+}

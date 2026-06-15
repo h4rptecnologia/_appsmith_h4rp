@@ -2,14 +2,14 @@
   "accentColor": "#D4A017",
   "allowAddNewRow": false,
   "animateLoading": true,
-  "borderColor": "#1f2933",
+  "borderColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "1.5rem",
   "borderWidth": "0",
-  "bottomRow": 76,
-  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "bottomRow": 60,
+  "boxShadow": "0px 12px 34px rgba(13, 27, 42, 0.10)",
   "cachedTableData": {},
   "canFreezeColumn": true,
-  "cellBackground": "#1f2933",
+  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -35,8 +35,9 @@
   },
   "columnOrder": [
     "id",
-    "chatwoot_bot_id",
-    "chatwoot_bot_name",
+    "chatwoot_team_id",
+    "chatwoot_team_name",
+    "principal_assignee_id",
     "bot_name",
     "description",
     "enabled",
@@ -49,16 +50,18 @@
     "fallback_team_id",
     "fallback_team_name",
     "created_at",
-    "updated_at",
-    "full_prompt"
+    "full_prompt",
+    "updated_at"
   ],
-  "columnUpdatedAt": 1781227376696,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1781565875659,
+  "columnWidthMap": {
+    "full_prompt": 247
+  },
   "compactMode": "SHORT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 10,
-  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndex": "",
   "defaultSelectedRowIndices": [
     0
   ],
@@ -69,12 +72,6 @@
     },
     {
       "key": "primaryColumns.id.computedValue"
-    },
-    {
-      "key": "primaryColumns.chatwoot_bot_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.chatwoot_bot_name.computedValue"
     },
     {
       "key": "primaryColumns.bot_name.computedValue"
@@ -119,10 +116,142 @@
       "key": "primaryColumns.full_prompt.computedValue"
     },
     {
+      "key": "primaryColumns.chatwoot_team_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.chatwoot_team_name.computedValue"
+    },
+    {
+      "key": "primaryColumns.principal_assignee_id.computedValue"
+    },
+    {
+      "key": "headerRowColor"
+    },
+    {
       "key": "headerTextColor"
     },
     {
       "key": "oddRowColor"
+    },
+    {
+      "key": "evenRowColor"
+    },
+    {
+      "key": "textColor"
+    },
+    {
+      "key": "primaryColumns.id.textColor"
+    },
+    {
+      "key": "primaryColumns.bot_name.textColor"
+    },
+    {
+      "key": "primaryColumns.description.textColor"
+    },
+    {
+      "key": "primaryColumns.enabled.textColor"
+    },
+    {
+      "key": "primaryColumns.prompt_resumo.textColor"
+    },
+    {
+      "key": "primaryColumns.provider.textColor"
+    },
+    {
+      "key": "primaryColumns.model_name.textColor"
+    },
+    {
+      "key": "primaryColumns.temperature.textColor"
+    },
+    {
+      "key": "primaryColumns.max_output_tokens.textColor"
+    },
+    {
+      "key": "primaryColumns.allow_handoff.textColor"
+    },
+    {
+      "key": "primaryColumns.fallback_team_id.textColor"
+    },
+    {
+      "key": "primaryColumns.fallback_team_name.textColor"
+    },
+    {
+      "key": "primaryColumns.created_at.textColor"
+    },
+    {
+      "key": "primaryColumns.updated_at.textColor"
+    },
+    {
+      "key": "primaryColumns.full_prompt.textColor"
+    },
+    {
+      "key": "primaryColumns.chatwoot_team_id.textColor"
+    },
+    {
+      "key": "primaryColumns.chatwoot_team_name.textColor"
+    },
+    {
+      "key": "primaryColumns.principal_assignee_id.textColor"
+    },
+    {
+      "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.bot_name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.description.cellBackground"
+    },
+    {
+      "key": "primaryColumns.enabled.cellBackground"
+    },
+    {
+      "key": "primaryColumns.prompt_resumo.cellBackground"
+    },
+    {
+      "key": "primaryColumns.provider.cellBackground"
+    },
+    {
+      "key": "primaryColumns.model_name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.temperature.cellBackground"
+    },
+    {
+      "key": "primaryColumns.max_output_tokens.cellBackground"
+    },
+    {
+      "key": "primaryColumns.allow_handoff.cellBackground"
+    },
+    {
+      "key": "primaryColumns.fallback_team_id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.fallback_team_name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.created_at.cellBackground"
+    },
+    {
+      "key": "primaryColumns.updated_at.cellBackground"
+    },
+    {
+      "key": "primaryColumns.full_prompt.cellBackground"
+    },
+    {
+      "key": "primaryColumns.chatwoot_team_id.cellBackground"
+    },
+    {
+      "key": "primaryColumns.chatwoot_team_name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.principal_assignee_id.cellBackground"
+    },
+    {
+      "key": "borderColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -137,19 +266,19 @@
   ],
   "enableClientSideSearch": true,
   "endOfData": false,
-  "evenRowColor": "#d4a017",
+  "evenRowColor": "{{appsmith.theme.colors.backgroundColor}}",
   "flexVerticalAlignment": "start",
-  "headerRowColor": "#1f2933",
+  "headerRowColor": "{{appsmith.theme.colors.backgroundColor}}",
   "headerTextColor": "{{appsmith.theme.colors.primaryColor}}",
-  "horizontalAlignment": "CENTER",
+  "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
-  "isVisibleFilters": true,
-  "isVisiblePagination": true,
-  "isVisibleSearch": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
   "key": "k2tkg3i35k",
   "label": "Data",
   "leftColumn": 3,
@@ -159,19 +288,18 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "oddRowColor": "{{appsmith.theme.colors.primaryColor}}",
-  "onRowSelected": "{{storeValue(\"botConfigMode\", \"edit\").then(() => storeValue(\"botConfigSelected\", Table1.selectedRow)).then(() => Promise.all([ListChatwootBots.run(), ListChatwootTeams.run()])).then(() => { resetWidget(\"InputBotName\", true); resetWidget(\"InputDescription\", true); resetWidget(\"InputFullPrompt\", true); resetWidget(\"InputProvider\", true); resetWidget(\"InputModelName\", true); resetWidget(\"InputTemperature\", true); resetWidget(\"InputMaxTokens\", true); resetWidget(\"SwitchEnabled\", true); resetWidget(\"SwitchAllowHandoff\", true); showModal(ModalBotConfig.name); })}}",
-  "originalBottomRow": 76,
-  "originalTopRow": 15,
+  "oddRowColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "onRowSelected": "{{storeValue(\"botConfigMode\", \"edit\").then(() => storeValue(\"botConfigSelected\", Table1.selectedRow)).then(() => ListChatwootTeams.run()).then(() => { resetWidget(\"SelectPromptTeam\", true); resetWidget(\"SelectFallbackTeam\", true); resetWidget(\"InputBotName\", true); resetWidget(\"InputDescription\", true); resetWidget(\"InputFullPrompt\", true); resetWidget(\"InputProvider\", true); resetWidget(\"InputModelName\", true); resetWidget(\"InputTemperature\", true); resetWidget(\"InputMaxTokens\", true); resetWidget(\"SwitchEnabled\", true); resetWidget(\"SwitchAllowHandoff\", true); showModal(ModalBotConfig.name); })}}",
+  "originalBottomRow": 60,
+  "originalTopRow": 16,
   "parentId": "umr2mzfdz8",
   "parentRowSpace": 10,
-  "primaryColumnId": "id",
   "primaryColumns": {
     "allow_handoff": {
       "alias": "allow_handoff",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "checkbox",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"allow_handoff\"])) : allow_handoff })()}}",
       "currencyCode": "USD",
@@ -179,7 +307,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "allow_handoff",
       "index": 11,
       "isCellEditable": false,
@@ -194,7 +322,7 @@
       "notation": "standard",
       "originalId": "allow_handoff",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -205,7 +333,7 @@
       "alias": "bot_name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"bot_name\"])) : bot_name })()}}",
       "currencyCode": "USD",
@@ -213,7 +341,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "bot_name",
       "index": 3,
       "isCellEditable": false,
@@ -224,31 +352,31 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Nome interno",
+      "label": "Nome",
       "notation": "standard",
       "originalId": "bot_name",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 190
     },
-    "chatwoot_bot_id": {
-      "alias": "chatwoot_bot_id",
+    "chatwoot_team_id": {
+      "alias": "chatwoot_team_id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"chatwoot_bot_id\"])) : chatwoot_bot_id })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"chatwoot_team_id\"])) : chatwoot_team_id })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
-      "id": "chatwoot_bot_id",
+      "horizontalAlignment": "LEFT",
+      "id": "chatwoot_team_id",
       "index": 1,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -258,31 +386,31 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "ID Chatwoot",
+      "label": "ID Time",
       "notation": "standard",
-      "originalId": "chatwoot_bot_id",
+      "originalId": "chatwoot_team_id",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "chatwoot_bot_name": {
-      "alias": "chatwoot_bot_name",
+    "chatwoot_team_name": {
+      "alias": "chatwoot_team_name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"chatwoot_bot_name\"])) : chatwoot_bot_name })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"chatwoot_team_name\"])) : chatwoot_team_name })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
-      "id": "chatwoot_bot_name",
+      "horizontalAlignment": "LEFT",
+      "id": "chatwoot_team_name",
       "index": 2,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -292,22 +420,22 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Bot Chatwoot",
+      "label": "Time do prompt",
       "notation": "standard",
-      "originalId": "chatwoot_bot_name",
+      "originalId": "chatwoot_team_name",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 190
+      "width": 220
     },
     "created_at": {
       "alias": "created_at",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"created_at\"])) : created_at })()}}",
       "currencyCode": "USD",
@@ -315,7 +443,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "created_at",
       "index": 14,
       "isCellEditable": false,
@@ -330,7 +458,7 @@
       "notation": "standard",
       "originalId": "created_at",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -341,7 +469,7 @@
       "alias": "description",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"description\"])) : description })()}}",
       "currencyCode": "USD",
@@ -349,7 +477,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "description",
       "index": 4,
       "isCellEditable": false,
@@ -364,7 +492,7 @@
       "notation": "standard",
       "originalId": "description",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -375,7 +503,7 @@
       "alias": "enabled",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "checkbox",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"enabled\"])) : enabled })()}}",
       "currencyCode": "USD",
@@ -383,7 +511,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "enabled",
       "index": 5,
       "isCellEditable": false,
@@ -398,7 +526,7 @@
       "notation": "standard",
       "originalId": "enabled",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -409,7 +537,7 @@
       "alias": "fallback_team_id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"fallback_team_id\"])) : fallback_team_id })()}}",
       "currencyCode": "USD",
@@ -417,7 +545,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "fallback_team_id",
       "index": 12,
       "isCellEditable": false,
@@ -432,7 +560,7 @@
       "notation": "standard",
       "originalId": "fallback_team_id",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -443,7 +571,7 @@
       "alias": "fallback_team_name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"fallback_team_name\"])) : fallback_team_name })()}}",
       "currencyCode": "USD",
@@ -451,7 +579,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "fallback_team_name",
       "index": 13,
       "isCellEditable": false,
@@ -461,12 +589,12 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Time fallback",
       "notation": "standard",
       "originalId": "fallback_team_name",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -477,7 +605,7 @@
       "alias": "full_prompt",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"full_prompt\"])) : full_prompt })()}}",
       "currencyCode": "USD",
@@ -485,7 +613,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "full_prompt",
       "index": 16,
       "isCellEditable": false,
@@ -495,12 +623,12 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "Prompt completo",
       "notation": "standard",
       "originalId": "full_prompt",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -511,7 +639,7 @@
       "alias": "id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
       "currencyCode": "USD",
@@ -519,7 +647,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "id",
       "index": 0,
       "isCellEditable": false,
@@ -534,7 +662,7 @@
       "notation": "standard",
       "originalId": "id",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -545,7 +673,7 @@
       "alias": "max_output_tokens",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"max_output_tokens\"])) : max_output_tokens })()}}",
       "currencyCode": "USD",
@@ -553,7 +681,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "max_output_tokens",
       "index": 10,
       "isCellEditable": false,
@@ -568,7 +696,7 @@
       "notation": "standard",
       "originalId": "max_output_tokens",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -579,7 +707,7 @@
       "alias": "model_name",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"model_name\"])) : model_name })()}}",
       "currencyCode": "USD",
@@ -587,7 +715,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "model_name",
       "index": 8,
       "isCellEditable": false,
@@ -602,18 +730,52 @@
       "notation": "standard",
       "originalId": "model_name",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 140
     },
+    "principal_assignee_id": {
+      "alias": "principal_assignee_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"principal_assignee_id\"])) : principal_assignee_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "principal_assignee_id",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "Agente principal",
+      "notation": "standard",
+      "originalId": "principal_assignee_id",
+      "sticky": "",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 110
+    },
     "prompt_resumo": {
       "alias": "prompt_resumo",
       "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"prompt_resumo\"])) : prompt_resumo })()}}",
       "currencyCode": "USD",
@@ -621,7 +783,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "prompt_resumo",
       "index": 6,
       "isCellEditable": false,
@@ -631,12 +793,12 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Prompt",
+      "isVisible": false,
+      "label": "Resumo do prompt",
       "notation": "standard",
       "originalId": "prompt_resumo",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -647,7 +809,7 @@
       "alias": "provider",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "text",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"provider\"])) : provider })()}}",
       "currencyCode": "USD",
@@ -655,7 +817,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "provider",
       "index": 7,
       "isCellEditable": false,
@@ -670,7 +832,7 @@
       "notation": "standard",
       "originalId": "provider",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -681,7 +843,7 @@
       "alias": "temperature",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "number",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"temperature\"])) : temperature })()}}",
       "currencyCode": "USD",
@@ -689,7 +851,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "CENTER",
+      "horizontalAlignment": "LEFT",
       "id": "temperature",
       "index": 9,
       "isCellEditable": false,
@@ -699,12 +861,12 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Temp.",
       "notation": "standard",
       "originalId": "temperature",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -715,7 +877,7 @@
       "alias": "updated_at",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "cellBackground": "#1f2933",
+      "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
       "columnType": "date",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"updated_at\"])) : updated_at })()}}",
       "currencyCode": "USD",
@@ -726,7 +888,6 @@
       "horizontalAlignment": "LEFT",
       "id": "updated_at",
       "index": 15,
-      "inputFormat": "YYYY-MM-DD hh:mm:ss",
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -735,12 +896,12 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Atualizado em",
+      "label": "Atualizado",
       "notation": "standard",
       "originalId": "updated_at",
       "outputFormat": "DD/MM/YYYY HH:mm",
       "sticky": "",
-      "textColor": "#d4a017",
+      "textColor": "{{appsmith.theme.colors.primaryColor}}",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -754,13 +915,14 @@
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{ListBotConfigs.data}}",
-  "textColor": "#d4a017",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
   "textSize": "0.875rem",
-  "topRow": 15,
+  "topRow": 16,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
+  "variant": "VARIANT2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "kgho2somf5",
+  "widgetId": "mjhh162mcc",
   "widgetName": "Table1"
 }

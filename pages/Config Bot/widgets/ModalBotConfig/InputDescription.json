@@ -4,7 +4,7 @@
   "autoFocus": false,
   "borderColor": "#A7ADB5",
   "borderRadius": "0.75rem",
-  "bottomRow": 68,
+  "bottomRow": 65,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.botConfigMode === \"edit\" ? (appsmith.store.botConfigSelected.description || \"\") : \"\"}}",
   "dynamicBindingPathList": [
@@ -42,9 +42,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "showStepArrows": false,
-  "topRow": 52,
+  "topRow": 49,
   "type": "INPUT_WIDGET_V2",
-  "validation": {},
+  "validation": "",
   "version": 2,
   "widgetId": "j90k1pijqf",
   "widgetName": "InputDescription"

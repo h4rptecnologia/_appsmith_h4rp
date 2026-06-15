@@ -1,0 +1,5 @@
+SELECT
+    t.id::TEXT AS value,
+    COALESCE(NULLIF(t.name, ''), 'Time') || ' (#' || t.id::TEXT || ')' AS label
+FROM chatwoot.teams t
+ORDER BY COALESCE(NULLIF(t.name, ''), 'Time'), t.id;

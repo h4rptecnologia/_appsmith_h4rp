@@ -9,7 +9,7 @@
     {
       "backgroundColor": "#FFFFFF",
       "borderRadius": "1.5rem",
-      "bottomRow": 790,
+      "bottomRow": 820,
       "boxShadow": "0px 20px 50px rgba(13, 27, 42, 0.20)",
       "canExtend": true,
       "detachFromLayout": true,

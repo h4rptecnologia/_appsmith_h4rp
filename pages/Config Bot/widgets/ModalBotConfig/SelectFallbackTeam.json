@@ -3,7 +3,7 @@
   "animateLoading": true,
   "borderColor": "#A7ADB5",
   "borderRadius": "0.75rem",
-  "bottomRow": 52,
+  "bottomRow": 49,
   "boxShadow": "none",
   "defaultOptionValue": "{{appsmith.store.botConfigSelected && appsmith.store.botConfigSelected.fallback_team_id ? String(appsmith.store.botConfigSelected.fallback_team_id) : \"\"}}",
   "dynamicBindingPathList": [
@@ -45,7 +45,7 @@
   "selectedOptionValue": "",
   "serverSideFiltering": false,
   "showStepArrows": false,
-  "topRow": 45,
+  "topRow": 42,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "9bzt9txjmn",

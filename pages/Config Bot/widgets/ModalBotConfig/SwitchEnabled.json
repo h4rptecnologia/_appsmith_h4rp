@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 27,
   "boxShadow": "none",
   "defaultSwitchState": "{{appsmith.store.botConfigMode === \"edit\" ? !!appsmith.store.botConfigSelected.enabled : true}}",
   "dynamicBindingPathList": [
@@ -32,7 +32,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 18,
-  "topRow": 26,
+  "topRow": 23,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "wkh9p7mh80",
