@@ -18,7 +18,11 @@ VALUES (
 	NULLIF({{InputDescription.text || ''}}, ''),
 	{{SwitchEnabled.isSwitchedOn}},
 	{{InputFullPrompt.text}},
-	COALESCE(NULLIF({{InputTemperature.text || ''}}, '')::NUMERIC, 0.30),
+	{{
+	InputTemperature.text && String(InputTemperature.text).trim() !== ''
+	? Number(InputTemperature.text)
+	: 0.30
+	}},
 	{{SwitchAllowHandoff.isSwitchedOn}},
 	{{SelectFallbackTeam.selectedOptionValue ? Number(SelectFallbackTeam.selectedOptionValue) : null}},
 	NOW(),
