@@ -1,0 +1,40 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 13,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{appsmith.store.teamMode === \"edit\" ? !!appsmith.store.teamSelected.allow_auto_assign : true}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "cfe9b57b50",
+  "label": "Auto atribuição",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231F20",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 33,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "parentId": "lc39lwraxo",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 52,
+  "topRow": 9,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "to74bys6dp",
+  "widgetName": "SwitchAutoAssign"
+}

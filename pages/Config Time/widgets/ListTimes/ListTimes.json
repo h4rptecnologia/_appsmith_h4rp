@@ -7,14 +7,14 @@
     "metaWidgetId"
   ],
   "animateLoading": true,
-  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "backgroundColor": "transparent",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 143,
-  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "bottomRow": 68,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1280,
+      "bottomRow": 530,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -32,7 +32,7 @@
       "flexLayers": [],
       "isLoading": false,
       "isVisible": true,
-      "key": "sakqjm7soa",
+      "key": "fwlljl6kza",
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
@@ -40,26 +40,25 @@
       "minWidth": 450,
       "mobileBottomRow": 400,
       "mobileLeftColumn": 0,
-      "mobileRightColumn": 455.71875,
+      "mobileRightColumn": 60.75,
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "noPad": true,
       "openParentPropertyPane": true,
       "parentColumnSpace": 1,
-      "parentId": "h8zo0r6rqb",
+      "parentId": "8v4nx891do",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
-      "rightColumn": 455.71875,
+      "rightColumn": 60.75,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "1zfuj0aow8",
-      "widgetName": "Canvas2"
+      "widgetId": "ajf0xfgzmh",
+      "widgetName": "Canvas1"
     }
   ],
   "currentItemsView": "{{[]}}",
-  "defaultSelectedItem": "",
   "dynamicBindingPathList": [
     {
       "key": "currentItemsView"
@@ -80,10 +79,10 @@
       "key": "borderRadius"
     },
     {
-      "key": "listData"
+      "key": "boxShadow"
     },
     {
-      "key": "backgroundColor"
+      "key": "listData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -99,35 +98,33 @@
   "isLoading": false,
   "isVisible": true,
   "itemBackgroundColor": "#FFFFFF",
-  "itemSpacing": "7",
-  "key": "wc4ww345wm",
-  "leftColumn": 4,
-  "listData": "{{ListBotConfigs.data || []}}",
-  "mainCanvasId": "1zfuj0aow8",
-  "mainContainerId": "a54xbdv3ef",
+  "itemSpacing": 8,
+  "key": "7k88qn4mz9",
+  "leftColumn": 11,
+  "listData": "{{ListChatwootTeamsFull.data || []}}",
+  "mainCanvasId": "ajf0xfgzmh",
+  "mainContainerId": "a44kst9h2h",
   "minWidth": 450,
-  "mobileBottomRow": 110,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 26,
-  "mobileTopRow": 70,
+  "mobileBottomRow": 65,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 3,
+  "mobileTopRow": 25,
   "needsErrorInfo": false,
-  "onItemClick": "",
-  "originalBottomRow": 143,
-  "originalTopRow": 15,
+  "onItemClick": "{{JSObject1.ListTimesonItemClick();}}",
   "pageSize": 4,
-  "parentColumnSpace": 18.98828125,
-  "parentId": "umr2mzfdz8",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
   "parentRowSpace": 10,
-  "primaryKeys": "{{ListBots.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{ListTimes.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 30,
   "selectedItemView": "{{{}}}",
   "templateHeight": 160,
   "topRow": 15,
   "triggeredItemView": "{{{}}}",
   "type": "LIST_WIDGET_V2",
-  "widgetId": "h8zo0r6rqb",
-  "widgetName": "ListBots"
+  "widgetId": "8v4nx891do",
+  "widgetName": "ListTimes"
 }

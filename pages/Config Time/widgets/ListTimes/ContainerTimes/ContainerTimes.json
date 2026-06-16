@@ -1,15 +1,15 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#ffffff",
+  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderColor": "{{appsmith.theme.colors.primaryColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "borderWidth": "2",
-  "bottomRow": 27,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "borderWidth": "1",
+  "bottomRow": 12,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 260,
+      "bottomRow": 120,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -26,7 +26,7 @@
       "flexLayers": [],
       "isLoading": false,
       "isVisible": true,
-      "key": "sakqjm7soa",
+      "key": "fwlljl6kza",
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
@@ -35,7 +35,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "a54xbdv3ef",
+      "parentId": "a44kst9h2h",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -43,8 +43,8 @@
       "type": "CANVAS_WIDGET",
       "useAutoLayout": false,
       "version": 1,
-      "widgetId": "fbuiqzt3gw",
-      "widgetName": "Canvas3"
+      "widgetId": "cq2exuo2hg",
+      "widgetName": "Canvas2"
     }
   ],
   "containerStyle": "card",
@@ -58,7 +58,7 @@
       "key": "borderRadius"
     },
     {
-      "key": "boxShadow"
+      "key": "backgroundColor"
     },
     {
       "key": "borderColor"
@@ -72,7 +72,7 @@
   "isListItemContainer": true,
   "isLoading": false,
   "isVisible": true,
-  "key": "5h1ncb88hw",
+  "key": "1qrlph7gj0",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
@@ -83,15 +83,15 @@
   "mobileTopRow": 0,
   "needsErrorInfo": false,
   "noContainerOffset": true,
-  "parentId": "1zfuj0aow8",
+  "parentId": "ajf0xfgzmh",
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "shouldScrollContents": true,
+  "shouldScrollContents": false,
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "a54xbdv3ef",
-  "widgetName": "ContainerBots"
+  "widgetId": "a44kst9h2h",
+  "widgetName": "ContainerTimes"
 }

@@ -38,7 +38,7 @@
   "shouldTruncate": false,
   "text": "{{\"Atualizado: \" + (currentItem.updated_at_formatado || \"-\")}}",
   "textAlign": "LEFT",
-  "textColor": "#A7ADB5",
+  "textColor": "#18181b",
   "topRow": 16,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

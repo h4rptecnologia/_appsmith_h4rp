@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "none",
+  "buttonColor": "#B91C1C",
+  "buttonStyle": "SECONDARY",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{appsmith.store.teamMode === \"edit\"}}",
+  "key": "8a43f179d5",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{DeleteChatwootTeam.run(() => { ListChatwootTeamsFull.run(); closeModal(ModalTeam.name); showAlert(\"Time removido no Chatwoot\", \"success\") }, () => showAlert(\"Erro ao excluir time\", \"error\"))}}",
+  "parentId": "lc39lwraxo",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 52,
+  "text": "Excluir",
+  "topRow": 31,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "i1lkz1c1oz",
+  "widgetName": "BtnDeleteTeam"
+}

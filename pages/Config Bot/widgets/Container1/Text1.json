@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderColor": "{{appsmith.theme.colors.primaryColor}}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "0",
+  "bottomRow": 97,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
+    },
+    {
+      "key": "borderColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4kg0f3e6o3",
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 50,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 18.98828125,
+  "parentId": "umr2mzfdz8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "Como usar a tela AGENTES CONFIGURÁVEIS\n\nAqui você escolhe qual time do Chatwoot vai usar cada bot.\n\nClique em NOVO AGENTE para criar uma configuração.\n\nEscolha o time que vai usar esse bot.\nExemplo: Vendas, Suporte ou Financeiro.\n\nEscreva o nome do AGENTE.\nExemplo: Bot de Vendas.\n\nNo campo Prompt, explique para o bot como ele deve atender o cliente.\n\nExemplo:\n\nVocê é um atendente de vendas.\nFale de forma simples e educada.\nAjude o cliente a escolher um produto.\nSe não souber responder, chame um atendente humano.\n\n\nDeixe o bot como ATIVO.\n\nClique em Salvar.\n\nPronto.\nAgora, quando uma conversa cair naquele time, o bot vai usar essa configuração.\n\n\n\nComo editar um Bot\nClique no card do bot que você quer mudar.\nA tela vai abrir com as informações dele.\nAltere o que precisar.\nExemplo: nome, time, prompt ou status.\nClique em Salvar.\n\nPronto.\nO bot vai começar a usar as novas regras.",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 16,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "34cfy86jug",
+  "widgetName": "Text1"
+}

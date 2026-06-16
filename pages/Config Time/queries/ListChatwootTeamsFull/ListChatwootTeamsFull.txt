@@ -1,0 +1,14 @@
+SELECT
+    t.id,
+    t.id::TEXT AS value,
+    COALESCE(NULLIF(t.name, ''), 'Time #' || t.id::TEXT) AS name,
+    COALESCE(NULLIF(t.name, ''), 'Time') || ' (#' || t.id::TEXT || ')' AS label,
+    t.description,
+    t.account_id,
+    COALESCE(t.allow_auto_assign, FALSE) AS allow_auto_assign,
+    CASE WHEN COALESCE(t.allow_auto_assign, FALSE) THEN 'Sim' ELSE 'Não' END AS auto_assign,
+    t.created_at,
+    t.updated_at,
+    TO_CHAR(t.updated_at, 'DD/MM/YYYY HH24:MI') AS atualizado
+FROM chatwoot.teams t
+ORDER BY COALESCE(NULLIF(t.name, ''), 'Time'), t.id;

@@ -38,7 +38,7 @@
   "shouldTruncate": false,
   "text": "{{\"Temp: \" + (currentItem.temperature ?? \"0.30\")}}",
   "textAlign": "LEFT",
-  "textColor": "#A7ADB5",
+  "textColor": "#18181b",
   "topRow": 12,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

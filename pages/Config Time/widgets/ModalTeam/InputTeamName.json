@@ -1,0 +1,51 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultText": "{{appsmith.store.teamMode === \"edit\" ? (appsmith.store.teamSelected.name || \"\") : \"\"}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "175f787970",
+  "label": "Nome do time",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231F20",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "parentId": "lc39lwraxo",
+  "placeholder": "Ex.: Financeiro",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "showStepArrows": false,
+  "topRow": 7,
+  "type": "INPUT_WIDGET_V2",
+  "validation": {},
+  "version": 2,
+  "widgetId": "umh0fksztr",
+  "widgetName": "InputTeamName"
+}

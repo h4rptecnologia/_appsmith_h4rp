@@ -1,10 +1,12 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#D4A017",
-  "borderRadius": "1rem",
-  "bottomRow": 150,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
   "boxShadow": "none",
   "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
     {
       "key": "fontFamily"
     }
@@ -12,35 +14,29 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.95rem",
-  "fontStyle": "",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "a62ocalha9",
-  "leftColumn": 5,
+  "key": "13cc5897d9",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 120,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 3,
-  "mobileRightColumn": 50,
-  "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 150,
-  "originalTopRow": 146,
   "overflow": "NONE",
-  "parentId": "0",
+  "parentId": "lc39lwraxo",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 50,
   "shouldTruncate": false,
-  "text": "",
+  "text": "{{appsmith.store.teamMode === \"edit\" ? \"Editar time do Chatwoot\" : \"Novo time do Chatwoot\"}}",
   "textAlign": "LEFT",
-  "textColor": "#1F2933",
-  "topRow": 146,
+  "textColor": "#231F20",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "of16yl4rcs",
-  "widgetName": "GoldDivider"
+  "widgetId": "a9f5wgocea",
+  "widgetName": "TxtTeamModalTitle"
 }
