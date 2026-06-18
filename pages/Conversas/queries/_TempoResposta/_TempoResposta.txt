@@ -1,7 +1,11 @@
 SELECT 
   DATE(c.created_at) AS dia,
-  COUNT(c.id) AS qtde_conversas
+  ROUND(
+    AVG(EXTRACT(EPOCH FROM (c.first_reply_created_at - c.created_at)) / 60),
+    2
+  ) AS tempo_medio_resposta_min
 FROM chatwoot.conversations c
 WHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')
+  AND c.first_reply_created_at IS NOT NULL
 GROUP BY DATE(c.created_at)
 ORDER BY dia;

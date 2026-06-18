@@ -1,0 +1,31 @@
+WITH max_dia AS (
+  SELECT 
+    DATE(c.created_at) AS dia,
+    COUNT(c.id) AS qtde_conversas
+  FROM chatwoot.conversations c
+  WHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')
+  GROUP BY DATE(c.created_at)
+  ORDER BY qtde_conversas DESC
+  LIMIT 1
+),
+hoje AS (
+  SELECT 
+    CURRENT_DATE AS dia,
+    COALESCE(
+      (SELECT COUNT(c.id) 
+       FROM chatwoot.conversations c 
+       WHERE DATE(c.created_at) = CURRENT_DATE), 
+      0
+    ) AS qtde_conversas
+)
+SELECT 
+  h.dia AS data_atual,
+  h.qtde_conversas AS conversas_hoje,
+  m.dia AS data_maxima,
+  m.qtde_conversas AS conversas_maximas,
+  ROUND(
+    ((h.qtde_conversas - m.qtde_conversas)::numeric / NULLIF(m.qtde_conversas,0)) * 100,
+    2
+  ) AS variacao_percentual
+FROM hoje h
+CROSS JOIN max_dia m;

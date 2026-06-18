@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a25ad11f7e5102981d52a90_d9320471-cc34-45bd-a8da-62998cfaa4c6",
-  "id": "Conversas__RelatorioGeral",
+  "gitSyncId": "6a25ad11f7e5102981d52a90_48a9bdeb-d3b1-4d74-94f7-948be47f3b7e",
+  "id": "Conversas__TaxaSemResposta",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  DATE(c.created_at) AS dia,\n  COUNT(c.id) AS qtde_conversas\nFROM chatwoot.conversations c\nWHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')\nGROUP BY DATE(c.created_at)\nORDER BY dia;\n",
+      "body": "SELECT \n  DATE(c.created_at) AS dia,\n  COUNT(c.id) AS total_conversas,\n  COUNT(*) FILTER (WHERE c.first_reply_created_at IS NULL) AS sem_resposta,\n  ROUND(\n    (COUNT(*) FILTER (WHERE c.first_reply_created_at IS NULL)::numeric / COUNT(c.id)) * 100,\n    2\n  ) AS taxa_sem_resposta_percentual\nFROM chatwoot.conversations c\nWHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')\nGROUP BY DATE(c.created_at)\nORDER BY dia;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "_RelatorioGeral",
+    "name": "_TaxaSemResposta",
     "pageId": "Conversas",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

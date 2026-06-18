@@ -1,0 +1,11 @@
+SELECT 
+  DATE(c.created_at) AS dia,
+  ROUND(
+    AVG(EXTRACT(EPOCH FROM (c.updated_at - c.created_at)) / 60),
+    2
+  ) AS tempo_medio_resolucao_min
+FROM chatwoot.conversations c
+WHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')
+  AND c.status IN (1, 2)   -- usa os códigos numéricos
+GROUP BY DATE(c.created_at)
+ORDER BY dia;

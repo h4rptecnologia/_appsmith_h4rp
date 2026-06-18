@@ -1,0 +1,12 @@
+SELECT 
+  DATE(c.created_at) AS dia,
+  COUNT(c.id) AS total_conversas,
+  COUNT(*) FILTER (WHERE c.first_reply_created_at IS NULL) AS sem_resposta,
+  ROUND(
+    (COUNT(*) FILTER (WHERE c.first_reply_created_at IS NULL)::numeric / COUNT(c.id)) * 100,
+    2
+  ) AS taxa_sem_resposta_percentual
+FROM chatwoot.conversations c
+WHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')
+GROUP BY DATE(c.created_at)
+ORDER BY dia;

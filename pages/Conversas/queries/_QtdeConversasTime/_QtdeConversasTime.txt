@@ -1,0 +1,29 @@
+select 
+  -- Conversas
+  c.id AS conversation_id,
+  c.account_id AS conversation_account_id,
+  c.inbox_id AS conversation_inbox_id,
+  c.status AS conversation_status,
+  c.assignee_id AS conversation_assignee_id,
+  c.created_at AS conversation_created_at,
+  c.updated_at AS conversation_updated_at,
+  c.contact_id AS conversation_contact_id,
+  c.display_id AS conversation_display_id,
+  c.team_id AS conversation_team_id,
+
+	 -- Inbox Members
+  im.id AS inbox_member_id,
+  im.user_id AS inbox_member_user_id,
+  im.inbox_id AS inbox_member_inbox_id,
+  im.created_at AS inbox_member_created_at,
+
+	-- Teams
+  t.id AS team_id,
+  t."name" AS team_name,
+  t.description AS team_description,
+  t.allow_auto_assign AS team_allow_auto_assign,
+  t.account_id AS team_account_id
+
+from chatwoot.conversations c
+inner join chatwoot.inbox_members im on (im.inbox_id = c.inbox_id)
+inner join chatwoot.teams t on (im.id = t.id);

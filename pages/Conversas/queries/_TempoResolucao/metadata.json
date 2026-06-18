@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a25ad11f7e5102981d52a90_d9320471-cc34-45bd-a8da-62998cfaa4c6",
-  "id": "Conversas__RelatorioGeral",
+  "gitSyncId": "6a25ad11f7e5102981d52a90_d2dc4a6d-090b-4b4b-9a7c-6919c596a952",
+  "id": "Conversas__TempoResolucao",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  DATE(c.created_at) AS dia,\n  COUNT(c.id) AS qtde_conversas\nFROM chatwoot.conversations c\nWHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')\nGROUP BY DATE(c.created_at)\nORDER BY dia;\n",
+      "body": "SELECT \n  DATE(c.created_at) AS dia,\n  ROUND(\n    AVG(EXTRACT(EPOCH FROM (c.updated_at - c.created_at)) / 60),\n    2\n  ) AS tempo_medio_resolucao_min\nFROM chatwoot.conversations c\nWHERE c.created_at >= (CURRENT_DATE - INTERVAL '1 month')\n  AND c.status IN (1, 2)   -- usa os códigos numéricos\nGROUP BY DATE(c.created_at)\nORDER BY dia;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "_RelatorioGeral",
+    "name": "_TempoResolucao",
     "pageId": "Conversas",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3v0uoo9rw1",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 33,
+  "needsErrorInfo": false,
+  "originalBottomRow": 13,
+  "originalTopRow": 8,
+  "overflow": "NONE",
+  "parentColumnSpace": 1.125,
+  "parentId": "0a772x6r2m",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const dados = _TaxaSemResposta.data;\n    if (!dados || dados.length === 0) {\n      return \"Nenhum dado encontrado para o período.\";\n    }\n\n    const hoje = dados[dados.length - 1];\n\n    // Se não houve nenhuma conversa no dia atual\n    if (hoje.total_conversas === 0) {\n      return `Não houveram interações na data atual (${hoje.dia}).`;\n    }\n\n    // Caso contrário, mostra a taxa normalmente\n    return `Hoje (${hoje.dia}) ${hoje.taxa_sem_resposta_percentual}% das conversas ficaram sem resposta (${hoje.sem_resposta} de ${hoje.total_conversas}).`;\n  })()\n}}\n",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 9,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "e9sx726qpe",
+  "widgetName": "Text9CopyCopyCopy"
+}

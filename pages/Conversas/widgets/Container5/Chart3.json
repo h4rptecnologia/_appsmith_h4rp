@@ -2,18 +2,17 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "allowScroll": false,
   "animateLoading": true,
-  "borderRadius": "1.5rem",
-  "bottomRow": 96,
-  "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 81,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
-    "a0lh37080l": {
-      "color": "#ce951e",
-      "data": "[\n  { \"x\": \"Conversas\", \"y\": {{_RelatorioGeral.data[0].qtde_conversas}} },\n  { \"x\": \"Mensagens\", \"y\": {{_RelatorioGeral.data[0].qtde_mensagens}} },\n  { \"x\": \"Contatos\", \"y\": {{_RelatorioGeral.data[0].qtde_contatos}} }\n]\n",
-      "seriesName": "Últimos 7 dias"
+    "iefkwm5n20": {
+      "data": "[\n  { \"x\": \"{{ _QtdeConversasTime.data[0].team_name }}\", \"y\": {{ (_QtdeConversasTime.data[0].team_name.length) }} }\n]",
+      "seriesName": "Por Time IA"
     }
   },
-  "chartName": "Últimas Conversas Iniciadas",
-  "chartType": "LINE_CHART",
+  "chartName": "Relatório de Conversas",
+  "chartType": "BAR_CHART",
   "customEChartConfig": "{{\n{\n  \"dataset\": {\n    \"source\": [\n      [\n        \"Day\",\n        \"Baidu\",\n        \"Google\",\n        \"Bing\"\n      ],\n      [\n        \"Mon\",\n        620,\n        120,\n        60\n      ],\n      [\n        \"Tue\",\n        732,\n        132,\n        72\n      ],\n      [\n        \"Wed\",\n        701,\n        101,\n        71\n      ],\n      [\n        \"Thu\",\n        734,\n        134,\n        74\n      ],\n      [\n        \"Fri\",\n        1090,\n        290,\n        190\n      ],\n      [\n        \"Sat\",\n        1130,\n        230,\n        130\n      ],\n      [\n        \"Sun\",\n        1120,\n        220,\n        110\n      ]\n    ]\n  },\n  \"tooltip\": {\n    \"trigger\": \"axis\",\n    \"axisPointer\": {\n      \"type\": \"shadow\"\n    }\n  },\n  \"title\": {\n    \"text\": \"Search Engine Usage\",\n    \"left\": \"center\",\n    \"textStyle\": {\n      \"width\": 200,\n      \"overflow\": \"truncate\"\n    }\n  },\n  \"legend\": {\n    \"top\": 40,\n    \"type\": \"scroll\"\n  },\n  \"grid\": {\n    \"left\": 15,\n    \"right\": 15,\n    \"bottom\": 30,\n    \"top\": 100,\n    \"containLabel\": true\n  },\n  \"xAxis\": [\n    {\n      \"type\": \"category\"\n    }\n  ],\n  \"yAxis\": [\n    {\n      \"type\": \"value\"\n    }\n  ],\n  \"series\": [\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    },\n    {\n      \"type\": \"bar\",\n      \"stack\": \"Search Engine\"\n    }\n  ]\n}\n}}",
   "customFusionChartConfig": {
     "dataSource": {
@@ -67,13 +66,19 @@
       "key": "customEChartConfig"
     },
     {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
       "key": "accentColor"
     },
     {
       "key": "fontFamily"
     },
     {
-      "key": "chartData.a0lh37080l.data"
+      "key": "chartData.iefkwm5n20.data"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -81,29 +86,30 @@
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isLoading": false,
   "isVisible": true,
-  "key": "wrtsrfohy8",
+  "key": "4ft75s3j0t",
   "labelOrientation": "auto",
-  "leftColumn": 2,
+  "leftColumn": 1,
   "minWidth": 450,
-  "mobileBottomRow": 100,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 10,
-  "mobileTopRow": 68,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 26,
+  "mobileTopRow": 6,
   "needsErrorInfo": true,
-  "originalBottomRow": 96,
-  "originalTopRow": 47,
-  "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "originalBottomRow": 81,
+  "originalTopRow": 48,
+  "parentColumnSpace": 17.40625,
+  "parentId": "0as1fii97d",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 45,
+  "setAdaptiveYMin": false,
   "showDataPointLabel": false,
-  "topRow": 47,
+  "topRow": 48,
   "type": "CHART_WIDGET",
   "version": 1,
-  "widgetId": "3ranv2kccs",
-  "widgetName": "Chart1",
-  "xAxisName": "Conversas, mensagens e contatos criados nos últimos 7 dias.",
-  "yAxisName": "Quantidade"
+  "widgetId": "xexcmsxgx4",
+  "widgetName": "Chart3",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
 }
