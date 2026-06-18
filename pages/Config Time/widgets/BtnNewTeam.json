@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 28,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -15,7 +15,6 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -25,22 +24,24 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "ca29ad980d",
-  "leftColumn": 42,
+  "key": "70a714818b",
+  "leftColumn": 3,
   "minWidth": 120,
   "needsErrorInfo": false,
-  "onClick": "{{storeValue('teamMode', 'edit').then(() => {\n  storeValue('teamSelected', currentItem);\n  showModal(ModalTeam.name);\n});}}",
-  "parentId": "cq2exuo2hg",
+  "onClick": "{{storeValue(\"teamMode\", \"create\").then(() => storeValue(\"teamSelected\", {})).then(() => { resetWidget(\"InputTeamName\", true); resetWidget(\"InputTeamDescription\", true); resetWidget(\"SwitchAutoAssign\", true); showModal(ModalTeam.name) })}}",
+  "originalBottomRow": 28,
+  "originalTopRow": 23,
+  "parentId": "0",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
-  "text": "Editar",
-  "topRow": 1,
+  "rightColumn": 14,
+  "text": "Novo time",
+  "topRow": 23,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "u1svnutd5k",
-  "widgetName": "BtnEdit"
+  "widgetId": "mz7sc2zvtg",
+  "widgetName": "BtnNewTeam"
 }

@@ -42,7 +42,7 @@ SELECT
   m.source_id AS message_source_id,
   m.content_type AS message_content_type,
   m.content_attributes AS message_content_attributes,
-  m.sender_type AS message_sender_type,
+  COALESCE(m.sender_type, 'Não Identificado') AS message_sender_type,
   m.sender_id AS message_sender_id,
   m.external_source_ids AS message_external_source_ids,
   m.additional_attributes AS message_additional_attributes,
@@ -51,9 +51,9 @@ SELECT
 
   -- Contatos
   ct.id AS contact_id,
-  ct."name" AS contact_name,
-  ct.email AS contact_email,
-  ct.phone_number AS contact_phone_number,
+  COALESCE(ct."name", 'Usuário não identificado') AS contact_name,
+  COALESCE(ct.email, 'E-mail não identificado') AS contact_email,
+  COALESCE(ct.phone_number, '(00) 00000-0000') AS contact_phone_number,
   ct.account_id AS contact_account_id,
   ct.created_at AS contact_created_at,
   ct.updated_at AS contact_updated_at,
@@ -68,6 +68,7 @@ SELECT
   ct.country_code AS contact_country_code,
   ct."blocked" AS contact_blocked,
   ct.company_id AS contact_company_id
+	
 FROM chatwoot.conversations c
 INNER JOIN chatwoot.messages m ON c.id = m.conversation_id
 INNER JOIN chatwoot.contacts ct ON ct.id = c.contact_id;

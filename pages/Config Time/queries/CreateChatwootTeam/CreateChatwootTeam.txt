@@ -1,0 +1,5 @@
+{
+  "name": "{{InputTeamName.text}}",
+  "description": "{{InputTeamDescription.text || ''}}",
+  "allow_auto_assign": {{SwitchAutoAssign.isSwitchedOn}}
+}

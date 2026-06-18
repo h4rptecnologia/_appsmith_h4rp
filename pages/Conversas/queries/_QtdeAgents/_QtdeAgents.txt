@@ -1,1 +1,0 @@
-select COUNT(b.name) as TOTAL from chatwoot.agent_bots b;

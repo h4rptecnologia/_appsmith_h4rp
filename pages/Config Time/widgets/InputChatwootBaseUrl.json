@@ -1,0 +1,56 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "defaultText": "{{appsmith.store.chatwootBaseUrl || \"\"}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "labelTextColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "42599589f3",
+  "label": "URL do Chatwoot",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 3,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "originalBottomRow": 21,
+  "originalTopRow": 14,
+  "parentId": "0",
+  "placeholder": "https://chatwoot.seudominio.com",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 25,
+  "showStepArrows": false,
+  "topRow": 14,
+  "type": "INPUT_WIDGET_V2",
+  "validation": "",
+  "version": 2,
+  "widgetId": "bv96bconur",
+  "widgetName": "InputChatwootBaseUrl"
+}

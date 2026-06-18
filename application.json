@@ -30,7 +30,7 @@
   "icon": "rose",
   "pages": [
     {
-      "id": "Config Bot",
+      "id": "Config Agent",
       "isDefault": true
     },
     {

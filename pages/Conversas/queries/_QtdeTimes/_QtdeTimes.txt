@@ -1,0 +1,1 @@
+select COUNT(t.id) AS TOTAL from chatwoot.teams t;

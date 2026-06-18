@@ -1,23 +1,24 @@
 {
-  "gitSyncId": "6a25ad11f7e5102981d52a90_2cbc6de4-2fe3-414f-ac3d-9c10d1e3c98b",
+  "gitSyncId": "6a25ad11f7e5102981d52a90_3a666d47-843b-4bf3-88d8-27307fe2a52e",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1620,
+          "bottomRow": 1940,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 770,
+          "minHeight": 1292,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1224,
+          "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 75,
+          "snapRows": 124,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Conversas",
-    "slug": "conversas"
+    "name": "Config Agent",
+    "slug": "config-agent"
   }
 }
