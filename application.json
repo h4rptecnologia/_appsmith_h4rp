@@ -25,9 +25,9 @@
   },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
-  "color": "#FBF4ED",
+  "color": "#CCCCCC",
   "evaluationVersion": 2,
-  "icon": "rose",
+  "icon": "dog",
   "pages": [
     {
       "id": "Config Agent",

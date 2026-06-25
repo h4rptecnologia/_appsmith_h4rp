@@ -24,13 +24,13 @@
         },
         {
           "key": "api_access_token",
-          "value": "{{InputApiToken.text}}"
+          "value": "{{getDadosConfig.data?.[0]?.chatwoot_token}}"
         }
       ],
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "{{InputChatwootBaseUrl.text.replace(/\\/$/, \"\") + \"/api/v1/accounts/\" + InputAccountId.text + \"/teams\"}}",
+      "path": "{{  (getDadosConfig.data?.[0]?.chatwoot_url || \"\").replace(/\\/$/, \"\") +  \"/api/v1/accounts/\" +  (getDadosConfig.data?.[0]?.chatwoot_id || \"\") +  \"/teams\"}}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

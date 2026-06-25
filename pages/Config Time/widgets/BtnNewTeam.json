@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 15,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -39,7 +39,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 14,
   "text": "Novo time",
-  "topRow": 23,
+  "topRow": 10,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "mz7sc2zvtg",
