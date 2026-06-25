@@ -291,8 +291,8 @@
   "needsErrorInfo": false,
   "oddRowColor": "{{appsmith.theme.colors.backgroundColor}}",
   "onRowSelected": "{{storeValue(\"botConfigMode\", \"edit\").then(() => storeValue(\"botConfigSelected\", Table1.selectedRow)).then(() => ListChatwootTeams.run()).then(() => { resetWidget(\"SelectPromptTeam\", true); resetWidget(\"SelectFallbackTeam\", true); resetWidget(\"InputBotName\", true); resetWidget(\"InputDescription\", true); resetWidget(\"InputFullPrompt\", true); resetWidget(\"InputProvider\", true); resetWidget(\"InputModelName\", true); resetWidget(\"InputTemperature\", true); resetWidget(\"InputMaxTokens\", true); resetWidget(\"SwitchEnabled\", true); resetWidget(\"SwitchAllowHandoff\", true); showModal(ModalBotConfig.name); })}}",
-  "originalBottomRow": 152,
-  "originalTopRow": 108,
+  "originalBottomRow": 181,
+  "originalTopRow": 137,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
