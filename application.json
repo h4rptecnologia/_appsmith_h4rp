@@ -31,7 +31,7 @@
   "pages": [
     {
       "id": "Config Agent",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Config Time",
@@ -39,7 +39,7 @@
     },
     {
       "id": "Conversas",
-      "isDefault": false
+      "isDefault": true
     },
     {
       "id": "Vendas",
